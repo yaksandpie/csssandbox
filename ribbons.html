@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ribbons</title>
+<link rel="stylesheet" type="text/css" href="screen.css" />
+
+<style>
+	.zindex_protection {
+		margin:75px auto 150px auto;
+		width:65%;
+		text-align:center;
+	} /* my page specific styles */
+
+	.zindex_protection {position:relative; z-index:1;} /* needed to preserve layering against other positioned elements */
+
+	.ribbon {
+		font-size:16px !important; /* the ribbon uses ems to adjust its size and the ems used here are based off of 16px . change accordingly */
+		position:relative;
+		background-color:#8f8fff;
+		color:#fff;
+		
+		padding:2em 2em;
+		margin: 0 0 3em;
+	}
+	
+	.ribbon .ribbon_content:before, .ribbon .ribbon_content:after {
+		content: "";
+		position: absolute;
+		display: block;
+		border-style: solid;
+		border-color: #0000aa transparent transparent transparent;
+		bottom: -2em;
+	}
+	
+	.ribbon .ribbon_content:before {
+		left: 0;
+		border-width: 2em 0 0 2em;
+	}
+	
+	.ribbon .ribbon_content:after {
+		right: 0;
+		border-width: 2em 2em 0 0;
+	}
+	
+	.ribbon:before, .ribbon:after {
+		content: "";
+		position: absolute;
+		display: block;
+		bottom: -2em;
+		border: 2.5em solid #5c5cff;
+		z-index: -1;
+	}
+	.ribbon:before {
+		left: -7em;
+		border-right-width: 6.5em;
+		border-left-color: transparent;
+	}
+	.ribbon:after {
+		right: -7em;
+		border-left-width: 6.5em;
+		border-right-color: transparent;
+	}
+
+
+</style>
+
+</head>
+<body>
+	<div id="title">ribbons</div>
+	<div id="subtitle">modern browsers</div>
+
+	<div class="zindex_protection">
+		<div class="ribbon">
+			<div class="ribbon_content">
+				adapted from <a href="http://jameskoster.co.uk/blog/pure-css-3d-ribbon/">http://jameskoster.co.uk/blog/pure-css-3d-ribbon/</a>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="footer">
+		<a href="index.html">
+			<span>sandwiches now!</span>
+			<div id="stampguy"><img src="../images/anime_luckycreaturestamp.png" /></div>
+		</a>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-16089152-1']); _gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+</body>
+</html>
